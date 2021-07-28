@@ -23,5 +23,6 @@ FAQ:
 
 Q: Will this pack be updating to GTCEu and the new Gregicality for GTCEu?
 A: Yes
+
 Q: When is the next update?
 A: 08/04/2021
