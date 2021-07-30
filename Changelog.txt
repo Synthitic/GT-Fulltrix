@@ -1,1 +1,72 @@
+v0.0.2 - 07/30/21
+	General:
+		+Lots of JEI cleanup
+		+Extra Cells 2
+		+Extra CPUs
+		-AE Additions
+		-Removed Nether Star and Infinity Catalyst Dust veins spawning, will be added back in a proper dimension
+	Thermal Expansion:
+		+Aqueous Accumulator generates water without water around it
+		+Changed augment slots to be 1,3,5,7,9 per upgrade for all machines and dynamos
+		+Adjusted generation of dynamos since RF:EU is 1:1
+		+Adjusted power usage since RF:EU is 1:1
+		+Increased tank capacity
+		+Increased power cell capacity
+		+Added fuels.cfg
+		-Tapper disabled
+		-Lexicon disabled
+		-Factorizer disabled
+		-Redstone furnace disabled
+		-Pulverizer disabled
+		-Sawmill disabled
+		-Smelter disabled
+		-Compactor disabled
+		-Refinery disabled
+		-Centrifuge disabled
+		-Igneous extruder disabled
+		-Cache disabled
+		-Strongbox disabled
+		-Florbs and Morbs disabled
+	Thermal Foundation:
+		+Breaking clathrates does not drop fluid
+		-Disabled armor, tools, etc..
+	Thermal Cultivation:
+		+Fake players can use a watering can
+	Extra Planets:
+		-Lead ore removed
+	GTCE & Gregicality:
+		+Adjusted plasma turbine output since there are more rotors and a different calculation
+		+Added chrome, iridium, osmium chests
+		+Hid ore products in JEI, ore products can still be seen with the byproduct tab on an ore. I am working on hiding all ores that won't show that tab.
+		+Changed field generator recipes to not be gated by osmium and use higher tier circuits and materials
+			Note: Assembly Line gregicality recipes for field gen needs to be changed still along with LuV-UXV
+		-Removed 3x3 LV-IV field generator crafting
+	Ender Storage:
+		+Changed the size of the chest from 9x3 to 9x6
+		-Recipes changed for chest and tank to be gated by HV
+	Random Things:
+		-Time in a bottle recipe changed, it's harder, probably not hard enough
+		-Time in a bottle time required to accumulate 1 second increased to 2^31-1 ticks, accumulate time through a temporary shapeless crafting recipe (bottle + gold block = 1 hour of time), will be changed to be contenttweaker items adding varying lengths
+	Extra Utilities 2:
+		-Deep dark recipe disabled until a balanced one can be created
+
+	Applied Energistics 2:
+		-Increased the energy usage from 40x base to 50x
+	Tinkers:
+		-Smeltery no longer doubles ores
+		-Change some oredict stuff
+	Solar Flux Reborn:
+		-All recipes for solars disabled until a balanced set of recipes is found
+	Utility Worlds:
+		+Mobs cannot spawn in utility worlds
+		-All recipes disabled, will be a quest reward choice between void and garden
+	Galaxy Space:
+		+Disabled Galaxy space main menu
+
+
 v0.0.1 - Initial Alpha - 07/28/21
+	NOTE: Not all things are documented for the inital release changes.
+	General:
+		FE:EU:AE ratio is 1:1:1
+	Solar Flux Reborn:
+		+Adjusted generation and added custom solars
