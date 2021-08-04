@@ -41,13 +41,57 @@ static shapedRecipes as IIngredient[][][][IItemStack] = {
 			[<enderio:block_reinforced_obsidian>, <gregtech:meta_item_1:32611>, <enderio:block_reinforced_obsidian>],
 		],
 	],
+	<snad:snad>: [
+		[
+			[null, <extrautils2:compressedsand:1>, null],
+			[null, <extrautils2:compressedsand:1>, null],
+			[null, null, null]
+		],
+	],
+	
+	//thermal series
+	<thermalfoundation:material:515>: [
+		[
+			[<minecraft:redstone_block>, null, null],
+			[null, <gregtech:meta_item_1:12112>, null], 
+			[null, null, <minecraft:redstone_block>]
+		],
+	],
+	<thermalfoundation:material:513>: [
+		[
+			[null, null, <minecraft:redstone_block>],
+			[null, <gregtech:meta_item_1:12026>, null],
+			[<minecraft:redstone_block>, null, null]
+		],
+	],
+	<thermalfoundation:material:514>: [
+		[
+			[null, null, <minecraft:redstone_block>],
+			[null, <gregtech:meta_item_1:12062>, null], 
+			[<minecraft:redstone_block>, null, null]
+		],
+	],
+	
+	//Block O' Water
+	<blockowater:block_o_water>: [
+		[
+			[<ore:paneGlass>, <ore:paneGlass>, <ore:paneGlass>],
+			[<minecraft:water_bucket>, <gregtech:machine_casing:10>, <minecraft:water_bucket>], 
+			[<ore:paneGlass>, <ore:paneGlass>, <ore:paneGlass>]
+		],
+	],
 };
 
 /*
     Shapeless Recipes
 */
 static shapelessRecipes as IIngredient[][][IItemStack] = {
-
+	<gregtech:cable:5071>: [
+			[<gregtech:cable:71>,<gregtech:meta_item_1:32627>],
+	],
+	<gregtech:cable:5237>: [
+			[<gregtech:cable:237>,<gregtech:meta_item_1:32627>],
+	],
 };
 
 /*
@@ -65,7 +109,7 @@ static removeRecipes as IItemStack[] = [
 		<gregtech:meta_item_1:32674>,
 		
 		//deep dark portal
-		<extrautils2:teleporter>,
+		<extrautils2:teleporter:1>,
 		
 		//enderstorage
 		<enderstorage:ender_storage>,
@@ -86,7 +130,15 @@ static removeRecipes as IItemStack[] = [
 		<solarflux:custom_solar_panel_solar_panel_xii>,
 		<solarflux:custom_solar_panel_solar_panel_xiii>,
 		
+		//Snad
+		<snad:snad>,
 		
+		//Block O' Water
+		<blockowater:block_o_water>,
+		
+		//red alloy and tin cable
+		<gregtech:cable:5237>,
+		<gregtech:cable:5071>,
 		
 ];
 
@@ -105,11 +157,13 @@ function machineRecipes() {
 		RecipeMaps.PLASMA_GENERATOR_FUELS.addRecipe(FuelRecipe.create(<liquid:plasma.infinity_catalyst_dust> * 15, sec(30), 2048)); 
 		
 		//remove field gens lv-iv
+		/*
 		gt.assembler.findRecipe(30, [<ore:dustEnderPearl>.firstItem, <ore:circuitBasic>.firstItem * 2], [<liquid:osmium> * 72]).remove();
 		gt.assembler.findRecipe(120, [<ore:dustEnderEye>.firstItem, <ore:circuitGood>.firstItem * 2], [<liquid:osmium> * 144]).remove();
 		gt.assembler.findRecipe(480, [<gregtech:meta_item_1:32724>, <ore:circuitAdvanced>.firstItem * 2], [<liquid:osmium> * 288]).remove();
 		gt.assembler.findRecipe(1920, [<ore:dustNetherStar>.firstItem, <ore:circuitExtreme>.firstItem * 2], [<liquid:osmium> * 576]).remove();
 		gt.assembler.findRecipe(7680, [<gregtech:meta_item_1:32725>, <ore:circuitElite>.firstItem * 2], [<liquid:osmium> * 1152]).remove();
+		*/
 		
 		//field generators lv-iv
 		gt.assembler.recipeBuilder()

@@ -21,6 +21,6 @@ recipes.addShapeless("chargebottle", <randomthings:timeinabottle>,[ <randomthing
 	}
 	}, null);
 	
-<minecraft:gold_ingot>.addTooltip(format.aqua("Adds 1 Hour to the Time in a Bottle"));
-<randomthings:timeinabottle>.addTooltip(format.red("Does not charge over Time!"));
-<randomthings:timeinabottle>.addTooltip("Use " + format.aqua("gold block") + format.gray(" to charge"));
+<minecraft:gold_block>.addTooltip(format.aqua("Adds One Hour to Time in a Bottle"));
+<randomthings:timeinabottle>.addTooltip(format.red("DOES NOT CHARGE OVER TIME"));
+<randomthings:timeinabottle>.addTooltip("Use " + format.aqua("gold block") + format.gray(" to charge."));

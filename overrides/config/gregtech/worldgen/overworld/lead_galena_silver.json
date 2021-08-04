@@ -1,0 +1,34 @@
+{
+  "weight": 60,
+  "density": 0.5,
+  "min_height": 15,
+  "max_height": 40,
+  "vein_populator": {
+    "type": "surface_rock",
+    "material": "lead"
+  },
+  "generator": {
+    "type": "ellipsoid",
+    "radius": [12, 15]
+  },
+  "filler": {
+    "type": "ga_simple",
+    "value": {
+      "type": "weight_random",
+      "values": [
+        {
+          "weight": 55,
+          "value": "ore:galena"
+        },
+        {
+          "weight": 40,
+          "value": "ore:silver"
+        },
+		{
+          "weight": 25,
+          "value": "ore:lead"
+        }
+      ]
+    }
+  }
+}

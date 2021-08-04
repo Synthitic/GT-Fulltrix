@@ -1,3 +1,73 @@
+v0.0.3 - 08/03/21
+	General:
+		+MultiblockTweaker
+		+Block O' Water
+		+Chisel
+		+Better Builder's Wands
+		+Forked GTCE
+		+Bonsai Trees 2
+		+Realistic Terrain Generation
+		+Flux Networks
+		+Infernal Mobs
+		+Blur
+		+Started fixing ore generation... (see GTCE and Gregicality)
+		+Phosphor
+		+/dank/null
+		+JEI bees
+		+Gendustry JEI Addon
+		+Surge
+		+Faster ladder climbing
+		+Advanced Rocketry 2.0.0
+		+Better Questing Questbook
+		+Custom Main Menu
+		+Resource Loader
+		+Custom Background
+		-Galacticraft and all its addons
+			-Galacticraft was switched out in favor of advanced rocketry due to ore generation bugs
+	Updated Mods:
+		+Brandon's Core
+	Better Questing:
+		+Beginning tab started
+		+Steam tab started
+		+LV tab started
+		+Ender IO tab started
+		+Thermal series tab started
+	Utility Worlds:
+		+Void and garden portals available as a quest reward in Beginning tab
+	GTCE and Gregicality:
+		+Veins generate in the center of chunks
+		+Ore generation base switched from default to GregicalityOreAddon
+		+Lossless wire materials do not need to be cables to be zero loss
+		+New formula for determining EU/t per rotor holder tier for turbine multiblocks
+			+If using a 100% efficient rotor with a certain tier rotor holder, you will generate 1 AMP of the rotor holder tier
+			-New rotor holder recipes are yet to be added
+		+Fluid cell for tiers LV-UV
+		+Fluid cells are hidden in JEI
+		+Increased capacity of quadruple and nonuple I/O hatches from 16B to 64B
+		+Changed tin cable and red alloy recipe
+		-Disabled Iron (III) chloride decomposition due to a dupe
+		-All bonus outputs (EU/t) for turbines set to zero due to new formula
+	Thermal Series:
+		-Disabled reservoir
+	Snad:
+		+Changed growth multiplier from 2x to 10x
+		-Recipe changed
+	EnderIO:
+		+Decreased staff of traveling cooldown
+	Block O' Water:
+		-Max output and transfer changed to 10mb/t
+		-Recipe changed
+	Draconic Evolution:
+		+Increased energy generation by 500x for draconic reactor
+		-Increased energy cost of all fusion crafting recipes by 10x
+		-Disabled ore generation
+	Astral Sorcery:
+		+Increased spawnrate of rock crystal ore
+	InGame Info XML:
+		+Changed to function similarily to GTNH. Loaded chunks and a couple other functions would not work unfortunately
+	Flux Networks:
+		+Changed transfer limit to 2^31-1
+
 v0.0.2 - 07/30/21
 	General:
 		+Lots of JEI cleanup

@@ -2,7 +2,7 @@
   "dims": [
     {
       "dimID": 0,
-      "dimName": "Overworld"
+      "dimName": "Earth"
     },
     {
       "dimID": 1,
@@ -11,6 +11,14 @@
     {
       "dimID": -1,
       "dimName": "Nether"
-    }
+    },
+	{
+	  "dimID": -11325,
+	  "dimName": "Deep Dark"
+	},
+	{
+	  "dimID": 3,
+	  "dimName": "Moon"
+	},
   ]
 }
