@@ -658,7 +658,9 @@
     },
     "9:10": {
       "questID:3": 9,
-      "preRequisites:11": [],
+      "preRequisites:11": [
+        59
+      ],
       "properties:10": {
         "betterquesting:10": {
           "issilent:1": 0,
@@ -3282,6 +3284,61 @@
         }
       },
       "rewards:9": {}
+    },
+    "59:10": {
+      "questID:3": 59,
+      "preRequisites:11": [],
+      "properties:10": {
+        "betterquesting:10": {
+          "issilent:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "lockedprogress:1": 0,
+          "tasklogic:8": "AND",
+          "repeattime:3": -1,
+          "visibility:8": "NORMAL",
+          "simultaneous:1": 0,
+          "icon:10": {
+            "id:8": "minecraft:skull",
+            "Count:3": 1,
+            "Damage:2": 3,
+            "OreDict:8": ""
+          },
+          "globalshare:1": 0,
+          "questlogic:8": "AND",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "autoclaim:1": 0,
+          "repeat_relative:1": 1,
+          "ismain:1": 0,
+          "name:8": "Dimensional Choice",
+          "desc:8": "You have a choice between a flat world and a void world to start with."
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      },
+      "rewards:9": {
+        "0:10": {
+          "rewardID:8": "bq_standard:choice",
+          "index:3": 0,
+          "choices:9": {
+            "0:10": {
+              "id:8": "utilityworlds:portal_garden",
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": ""
+            },
+            "1:10": {
+              "id:8": "utilityworlds:portal_void",
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": ""
+            }
+          }
+        }
+      }
     }
   },
   "questLines:9": {
@@ -3384,6 +3441,13 @@
           "y:3": -108,
           "id:3": 28,
           "sizeY:3": 24
+        },
+        "14:10": {
+          "sizeX:3": 48,
+          "x:3": -264,
+          "y:3": -72,
+          "id:3": 59,
+          "sizeY:3": 48
         }
       },
       "lineID:3": 0,
@@ -4149,7 +4213,7 @@
       "home_anchor_y:5": -0.5,
       "livesmax:3": 10,
       "home_anchor_x:5": 0.5,
-      "editmode:1": 1,
+      "editmode:1": 0,
       "hardcore:1": 0,
       "home_image:8": "gt_fulltrix:textures/gui/title.png",
       "party_enable:1": 1,

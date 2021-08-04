@@ -22,10 +22,13 @@ v0.0.3 - 08/03/21
 		+Custom Main Menu
 		+Resource Loader
 		+Custom Background
+		+Default Options
+		+FTB Backups (Forge)
 		-Galacticraft and all its addons
 			-Galacticraft was switched out in favor of advanced rocketry due to ore generation bugs
 	Updated Mods:
 		+Brandon's Core
+		+CraftTweaker
 	Better Questing:
 		+Beginning tab started
 		+Steam tab started

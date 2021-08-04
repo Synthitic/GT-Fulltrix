@@ -57,7 +57,7 @@
         </line>
         <line>
 			<icon>
-                <str>galacticraftcore:rocket_t1</str>
+                <str>extrautils2:teleporter</str>
                 <num>0</num>
             </icon>
             <str> $rDimension: $5{dimension} ({dimensionid}) </str>
