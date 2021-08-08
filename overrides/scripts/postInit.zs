@@ -9,7 +9,7 @@ function initDissable() {
 }
 
 function initOreDict() {
-    //scripts.oreDict.init();
+    scripts.oreDict.init();
 }
 
 function initRecipes() {

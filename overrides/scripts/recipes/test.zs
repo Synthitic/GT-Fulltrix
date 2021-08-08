@@ -8,6 +8,7 @@ import crafttweaker.item.IIngredient;
 import crafttweaker.liquid.ILiquidStack;
 import mods.gregtech.recipe.RecipeMaps;
 import mods.gregtech.recipe.FuelRecipe;
+import mods.tconstruct.Alloy;
 
 
 static shapedRecipes as IIngredient[][][][IItemStack] = {
@@ -20,6 +21,7 @@ static shapedRecipes as IIngredient[][][][IItemStack] = {
 		]
 	]
     */
+	//time in a bottle
 	<randomthings:timeinabottle>: [
 		[
 			[<minecraft:golden_apple>, <ore:circuitGood>, <minecraft:golden_apple>],
@@ -27,6 +29,8 @@ static shapedRecipes as IIngredient[][][][IItemStack] = {
 			[<minecraft:lapis_block>, <minecraft:glass_bottle>, <minecraft:lapis_block>]
 		],
 	],
+	
+	//ender tank and ender chest
 	<enderstorage:ender_storage> * 2: [
 		[
 			[<gregtech:meta_item_1:32671>, <minecraft:ender_eye>, <gregtech:meta_item_1:32681>],
@@ -41,6 +45,8 @@ static shapedRecipes as IIngredient[][][][IItemStack] = {
 			[<enderio:block_reinforced_obsidian>, <gregtech:meta_item_1:32611>, <enderio:block_reinforced_obsidian>],
 		],
 	],
+	
+	//snad
 	<snad:snad>: [
 		[
 			[null, <extrautils2:compressedsand:1>, null],
@@ -80,17 +86,130 @@ static shapedRecipes as IIngredient[][][][IItemStack] = {
 			[<ore:paneGlass>, <ore:paneGlass>, <ore:paneGlass>]
 		],
 	],
+	
+	//circuit etcher
+	<threng:machine:2>: [
+		[
+			[<appliedenergistics2:material:19>, <ae2stuff:inscriber>, <appliedenergistics2:material:13>],
+			[<appliedenergistics2:quartz_glass>, <threng:material:4>, <appliedenergistics2:quartz_glass>],
+			[<appliedenergistics2:material:15>, <appliedenergistics2:material:43>, <appliedenergistics2:material:14>]
+		],
+	],
+	
+	//scanner
+	<gregtech:meta_item_2:32579>: [
+		[
+			[<gregtech:meta_item_1:12111>, <gregtech:meta_item_1:32690>, <gregtech:meta_item_1:12111>],
+			[<ore:circuitBasic>, <gregtech:meta_item_1:12209>, <ore:circuitBasic>], 
+			[<gregtech:meta_item_1:12184>, <gregtech:meta_item_1:32517>, <gregtech:meta_item_1:12184>]
+		],
+		[
+			[<gregtech:meta_item_1:12111>, <gregtech:meta_item_1:32690>, <gregtech:meta_item_1:12111>],
+			[<ore:circuitBasic>, <gregtech:meta_item_1:12209>, <ore:circuitBasic>], 
+			[<gregtech:meta_item_1:12184>, <gregtech:meta_item_1:32518>, <gregtech:meta_item_1:12184>]
+		],
+		[
+			[<gregtech:meta_item_1:12111>, <gregtech:meta_item_1:32690>, <gregtech:meta_item_1:12111>],
+			[<ore:circuitBasic>, <gregtech:meta_item_1:12209>, <ore:circuitBasic>], 
+			[<gregtech:meta_item_1:12184>, <gregtech:meta_item_1:32519>, <gregtech:meta_item_1:12184>]
+		],
+	],
+	
+	//forestry worktable
+	<forestry:worktable>: [
+		[
+			[<minecraft:chest>, <minecraft:planks>, <minecraft:chest>],
+			[<minecraft:planks>, <avaritia:compressed_crafting_table>, <minecraft:planks>], 
+			[<minecraft:chest>, <minecraft:planks>, <minecraft:chest>]
+		],
+	],
+	
+	//dynamos, augments specializations
+	<thermalexpansion:augment:673>: [
+		[
+			[<gregtech:meta_item_1:32613>, <thermalfoundation:material:293>, <gregtech:meta_item_1:32613>],
+			[<gregtech:meta_item_1:13072>, <thermalfoundation:material:515>, <gregtech:meta_item_1:13072>],
+			[<gregtech:meta_item_1:32613>, <gregtech:meta_item_1:2503>, <gregtech:meta_item_1:32613>]
+		],
+	],
+	<thermalexpansion:augment:672>: [
+		[
+			[<gregtech:meta_item_1:32612>, <ore:gearLumium>, <gregtech:meta_item_1:32612>],
+			[<ore:plateStainlessSteel>, <thermalfoundation:material:515>, <ore:plateStainlessSteel>], 
+			[<gregtech:meta_item_1:32612>, <ore:dustRegularRedstone>, <gregtech:meta_item_1:32612>]
+		],
+	],
+	<thermalexpansion:augment:656>: [
+		[
+			[<gregtech:meta_item_1:32612>, <ore:gearLumium>, <gregtech:meta_item_1:32612>],
+			[<ore:plateInvar>, <thermalfoundation:material:515>, <ore:plateInvar>],
+			[<gregtech:meta_item_1:32612>, <ore:dustCryotheum>, <gregtech:meta_item_1:32612>]
+		],
+	],
+	<thermalexpansion:dynamo>: [
+		[
+			[<ore:gearCopper>, <thermalfoundation:material:514>, <ore:gearCopper>],
+			[<ore:ingotIron>, <gregtech:machine_casing:10>, <ore:ingotIron>],
+			[<ore:ingotCopper>, <ore:dustRegularRedstone>, <ore:ingotCopper>]
+		],
+	],
+	<thermalexpansion:dynamo:1>: [
+		[
+			[<gregtech:meta_item_1:32641>, <thermalfoundation:material:514>, <gregtech:meta_item_1:32641>],
+			[<ore:ingotIron>, <gregtech:machine:502>, <ore:ingotIron>],
+			[<ore:ingotInvar>, <ore:dustRegularRedstone>, <ore:ingotInvar>]
+		],
+	],
+	<thermalexpansion:dynamo:2>: [
+		[
+			[<gregtech:meta_item_1:32642>, <thermalfoundation:material:514>, <gregtech:meta_item_1:32642>],
+			[<ore:ingotIron>, <gregtech:machine:503>, <ore:ingotIron>], 
+			[<ore:ingotTin>, <ore:dustRegularRedstone>, <ore:ingotTin>]
+		],
+	],
+	<thermalexpansion:augment:576>: [
+		[
+			[null, <ore:gearIron>, null],[<ore:plateCopper>, <minecraft:bucket>, <ore:plateCopper>], 
+			[null, <ore:blockGlassColorless>, null]
+		],
+	],
+	
+	//industrial machine chassis
+	<enderio:item_material:1>: [
+		[
+			[<ore:stickLongDarkSteel>, <ore:ingotDarkSteel>, <ore:stickLongDarkSteel>],
+			[<ore:ingotDarkSteel>, <enderio:block_infinity>, <ore:ingotDarkSteel>],
+			[<ore:stickLongDarkSteel>, <ore:ingotDarkSteel>, <ore:stickLongDarkSteel>]
+		],
+	],
 };
 
 /*
     Shapeless Recipes
 */
 static shapelessRecipes as IIngredient[][][IItemStack] = {
+	//tin and red alloy cables
 	<gregtech:cable:5071>: [
 			[<gregtech:cable:71>,<gregtech:meta_item_1:32627>],
 	],
 	<gregtech:cable:5237>: [
 			[<gregtech:cable:237>,<gregtech:meta_item_1:32627>],
+	],
+	
+	//extended crafting table duplication
+	<extendedcrafting:table_ultimate> * 2: [
+		[<extendedcrafting:table_ultimate>],
+	],
+	<extendedcrafting:table_elite> * 2: [
+		[<extendedcrafting:table_elite>],
+	],
+	<extendedcrafting:table_advanced> * 2: [
+		[<extendedcrafting:table_advanced>],
+	],
+	
+	//stainless steel dust
+	<gregtech:meta_item_1:2183> * 7: [
+		[<gregtech:meta_item_1:2033>,<gregtech:meta_item_1:2033>,<gregtech:meta_item_1:2033>,<gregtech:meta_item_1:2033>,<gregtech:meta_item_1:2033>,<gregtech:meta_item_1:2033>,<gregtech:meta_item_1:2044>,<gregtech:meta_item_1:2039>,<gregtech:meta_item_1:2016>],
 	],
 };
 
@@ -140,6 +259,30 @@ static removeRecipes as IItemStack[] = [
 		<gregtech:cable:5237>,
 		<gregtech:cable:5071>,
 		
+		//circuit etcher
+		<threng:machine:2>,
+		
+		//scanner
+		<gregtech:meta_item_2:32579>,
+		
+		//stainless steel dust
+		<gregtech:meta_item_1:2183> * 9,
+		
+		//forestry worktable
+		<forestry:worktable>,
+		
+		//signalum and lumium dust
+		<ore:dustLumium>.firstItem,
+		<ore:dustSignalum>.firstItem,
+		
+		//dynamos, augments specializations
+		<thermalexpansion:augment:672>,
+		<thermalexpansion:augment:673>,
+		<thermalexpansion:augment:656>,
+		<thermalexpansion:dynamo>,
+		<thermalexpansion:dynamo:1>,
+		<thermalexpansion:dynamo:2>,
+		<thermalexpansion:augment:576>,
 ];
 
 static removeFurnace as IIngredient[] = [
@@ -150,7 +293,7 @@ function machineRecipes() {
 		gt.compressor.recipeBuilder()
         .inputs([<ore:dustInfinityCatalystDust> * 64])
         .outputs([<avaritia:resource:5>])
-        .EUt(500000).duration(sec(1))
+        .EUt(2013265920).duration(sec(1))
         .buildAndRegister();
 		
 		
@@ -202,8 +345,169 @@ function machineRecipes() {
                 .duration(100).EUt(7680).buildAndRegister();
 				
 		//deep dark portal
-
 		
+		//charged certus
+		gt.chemical_reactor.recipeBuilder()
+			.inputs(<ore:gemCertusQuartz> * 1, <ore:dustRedstone> * 1)
+			.fluidInputs(<liquid:water> * 250)
+			.outputs(<appliedenergistics2:material:1> * 1)
+			.duration(sec(30)).EUt(30).buildAndRegister();
+		
+		gt.chemical_reactor.recipeBuilder()
+			.inputs(<ore:gemCertusQuartz> * 1, <ore:dustRedstone> * 1)
+			.fluidInputs(<liquid:distilled_water> * 100)
+			.outputs(<appliedenergistics2:material:1> * 1)
+			.duration(sec(10)).EUt(30).buildAndRegister();
+			
+		//fluix dust macerator
+		gt.macerator.recipeBuilder()
+			.inputs(<appliedenergistics2:material:7> * 1)
+			.outputs(<appliedenergistics2:material:8> * 1)
+			.duration(30).EUt(8).buildAndRegister();
+			
+		gt.macerator.recipeBuilder()
+			.inputs(<appliedenergistics2:material:12> * 2)
+			.outputs(<appliedenergistics2:material:8> * 1)
+			.duration(30).EUt(8).buildAndRegister();
+			
+		//remove sag mill fluix recipe
+		mods.enderio.SagMill.removeRecipe(<appliedenergistics2:material:7>);
+		
+		//fused quartz
+		alloy_smelter.recipeBuilder()
+			.inputs(<ore:gemQuartz> * 2, <ore:dustRegularNetherQuartz> * 2)
+			.outputs(<ore:fusedQuartz>.firstItem * 4)
+			.duration(100).EUt(30).buildAndRegister();
+		
+		//quite clear glass
+		furnace.addRecipe(<enderio:block_fused_glass>, <minecraft:glass>, 0.0);
+		
+		//sand into clay
+		gt.chemical_reactor.recipeBuilder()
+			.inputs(<minecraft:sand> * 1)
+			.inputs(<gregtech:meta_item_1:32766>.withTag({Configuration: 1}))
+			.fluidInputs(<liquid:water> * 1000)
+			.outputs(<minecraft:clay> * 1)
+			.duration(sec(10)).EUt(8).buildAndRegister();
+		
+		gt.large_chemical_reactor.recipeBuilder()
+			.inputs(<minecraft:sand> * 1)
+			.inputs(<gregtech:meta_item_1:32766>.withTag({Configuration: 1}))
+			.fluidInputs(<liquid:water> * 1000)
+			.outputs(<minecraft:clay> * 1)
+			.duration(sec(10)).EUt(8).buildAndRegister();
+		
+		//stainless steel balance
+		mixer.findRecipe(8, [<ore:dustIron>.firstItem * 4, <ore:dustChrome>.firstItem, <ore:dustManganese>.firstItem, <ore:dustInvar>.firstItem * 3], null).remove();
+		mixer.findRecipe(8, [<ore:dustTinyIron>.firstItem * 4, <ore:dustTinyChrome>.firstItem, <ore:dustTinyManganese>.firstItem, <ore:dustTinyInvar>.firstItem * 3], null).remove();
+		mixer.findRecipe(30, [<ore:dustIron>.firstItem * 6, <ore:dustChrome>.firstItem, <ore:dustManganese>.firstItem, <ore:dustNickel>.firstItem], null).remove();
+		large_mixer.findRecipe(8, [<ore:dustIron>.firstItem * 4, <ore:dustChrome>.firstItem, <ore:dustManganese>.firstItem, <ore:dustInvar>.firstItem * 3, <gregtech:meta_item_1:32766>.withTag({Configuration: 4})], null).remove();
+		large_mixer.findRecipe(8, [<ore:dustTinyIron>.firstItem * 4, <ore:dustTinyChrome>.firstItem, <ore:dustTinyManganese>.firstItem, <ore:dustTinyInvar>.firstItem * 3, <gregtech:meta_item_1:32766>.withTag({Configuration: 4})], null).remove();
+		large_mixer.findRecipe(30, [<ore:dustIron>.firstItem * 6, <ore:dustChrome>.firstItem, <ore:dustManganese>.firstItem, <ore:dustNickel>.firstItem, <gregtech:meta_item_1:32766>.withTag({Configuration: 4})], null).remove();
+		blast_furnace.findRecipe(128, [<ore:dustStainlessSteel>.firstItem], null).remove();
+		
+		mixer.recipeBuilder()
+			.inputs(<ore:dustIron> * 6, <ore:dustChrome>, <ore:dustManganese>, <ore:dustNickel>)
+			.outputs(<ore:dustStainlessSteel>.firstItem * 9)
+			.duration(sec(25)).EUt(120).buildAndRegister();
+			
+		large_mixer.recipeBuilder()
+			.inputs(<ore:dustIron> * 6, <ore:dustChrome>, <ore:dustManganese>, <ore:dustNickel>, <gregtech:meta_item_1:32766>.withTag({Configuration: 4}))
+			.outputs(<ore:dustStainlessSteel>.firstItem * 9)
+			.duration(sec(25)).EUt(120).buildAndRegister();
+		
+		
+		blast_furnace.recipeBuilder()
+			.inputs(<ore:dustStainlessSteel>, <gregtech:meta_item_1:32766>.withTag({Configuration: 1}))
+			.outputs(<ore:ingotStainlessSteel>.firstItem)
+			.property("temperature", 1700)
+			.duration(sec(60)).EUt(480).buildAndRegister();
+		
+		blast_furnace.recipeBuilder()
+			.inputs(<ore:dustStainlessSteel>, <gregtech:meta_item_1:32766>.withTag({Configuration: 11}))
+			.fluidInputs(<liquid:oxygen> * 1000)
+			.outputs(<ore:ingotStainlessSteel>.firstItem)
+			.property("temperature", 1700)
+			.duration(sec(40)).EUt(480).buildAndRegister();
+			
+		//integrate fluid extract fish oil recipe for pam's fish
+		for fish in loadedMods["harvestcraft"].items as IItemStack[] {
+			if (<ore:listAllfishfresh> has fish) {
+				gt.fluid_extractor.recipeBuilder()
+					.inputs(fish)
+					.fluidOutputs(<liquid:fish_oil> * 40)
+					.duration(sec(8)).EUt(4).buildAndRegister();
+			}
+		}
+		
+		//refined fuel recipes for thermal compression dynamo
+		large_chemical_reactor.recipeBuilder()
+			.inputs(<gregtech:meta_item_1:32766>.withTag({Configuration: 1}))
+			.fluidInputs(<liquid:high_octane> * 800, <liquid:nitro_fuel> * 150, <liquid:light_e_naquadah_fuel> * 200, <liquid:medium_e_naquadah_fuel> * 75, <liquid:heavy_e_naquadah_fuel> * 25)
+			.fluidOutputs(<liquid:refined_fuel> * 360000)
+			.duration(sec(1)).EUt(30720).buildAndRegister();
+			
+		large_chemical_reactor.recipeBuilder()
+			.inputs(<gregtech:meta_item_1:32766>.withTag({Configuration: 1}))
+			.fluidInputs(<liquid:high_octane> * 800, <liquid:nitro_fuel> * 150, <liquid:light_naquadah_fuel> * 500, <liquid:medium_naquadah_fuel> * 175, <liquid:heavy_naquadah_fuel> * 50)
+			.fluidOutputs(<liquid:refined_fuel> * 180000)
+			.duration(sec(1)).EUt(7680).buildAndRegister();
+			
+		//remove alloying lumium, signalum, enderium in smeltery
+		Alloy.removeRecipe(<liquid:lumium>);
+		Alloy.removeRecipe(<liquid:signalum>);
+		Alloy.removeRecipe(<liquid:enderium>);
+		
+		//extruder recipes for lumium and signalum gears
+		extruder.recipeBuilder()
+			.inputs(<ore:ingotLumium>)
+			.notConsumable(<metaitem:shape.extruder.gear>)
+			.outputs(<ore:gearLumium>.firstItem)
+			.duration(sec(15)).EUt(64).buildAndRegister();
+			
+		extruder.recipeBuilder()
+			.inputs(<ore:ingotSignalum>)
+			.notConsumable(<metaitem:shape.extruder.gear>)
+			.outputs(<ore:gearSignalum>.firstItem)
+			.duration(sec(30)).EUt(128).buildAndRegister();
+			
+		//conductive iron in alloy smelter
+		alloy_smelter.recipeBuilder()
+			.inputs(<ore:dustRedstone>, <ore:ingotIron>)
+			.outputs(<ore:ingotConductiveIron>.firstItem)
+			.duration(sec(5)).EUt(30).buildAndRegister();
+			
+		alloy_smelter.recipeBuilder()
+			.inputs(<ore:dustRedstone>, <ore:dustIron>)
+			.outputs(<ore:ingotConductiveIron>.firstItem)
+			.duration(sec(5)).EUt(30).buildAndRegister();
+			
+		//pulsating iron in alloy smelter
+		alloy_smelter.recipeBuilder()
+			.inputs(<ore:dustEnderPearl>, <ore:ingotConductiveIron>)
+			.outputs(<ore:ingotPulsatingIron>.firstItem)
+			.duration(sec(5)).EUt(30).buildAndRegister();
+			
+		//soularium in alloy smelter
+		alloy_smelter.recipeBuilder()
+			.inputs(<minecraft:soul_sand>, <ore:ingotGold>)
+			.outputs(<ore:ingotSoularium>.firstItem)
+			.duration(sec(5)).EUt(30).buildAndRegister();
+			
+		//crude steel in alloy smelter
+		alloy_smelter.recipeBuilder()
+			.inputs(<ore:dustClay>, <ore:dustStone>)
+			.outputs(<ore:ingotCrudeSteel>.firstItem)
+			.duration(sec(10)).EUt(30).buildAndRegister();
+			
+		//crystalline alloy in alloy smelter
+		alloy_smelter.recipeBuilder()
+			.inputs(<ore:ingotGold>, <ore:itemPulsatingPowder>)
+			.outputs(<ore:ingotCrystallineAlloy>.firstItem)
+			.duration(sec(5)).EUt(7680).buildAndRegister();
+			
+		
+			
 }
 
 function init() {

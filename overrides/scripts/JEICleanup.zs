@@ -80,48 +80,85 @@ for item in gregtechhItems {
 }
 */
 
+val toHideCategory as string[] = [
 
-mods.jei.JEI.hideCategory("minecraft.anvil");
-mods.jei.JEI.hideCategory("Painter");
-mods.jei.JEI.hideCategory("extrautils2.blockPatterns");
-mods.jei.JEI.hideCategory("jeresources.enchantment");
-mods.jei.JEI.hideCategory("forestry.bottler");
-mods.jei.JEI.hideCategory("forestry.squeezer");
-mods.jei.JEI.hideCategory("EIOTank");
-mods.jei.JEI.hideCategory("tconstruct.smeltery");
+	"minecraft.anvil",
+	"Painter",
+	"extrautils2.blockPatterns",
+	"jeresources.enchantment",
+	"forestry.bottler",
+	"forestry.squeezer",
+	"EIOTank",
+	"tconstruct.smeltery",
+	
+	"thermalexpansion.factorizer_split",
+	"thermalexpansion.factorizer_combine",
+	"thermalexpansion.furnace",
+	"thermalexpansion.furnace_food",
+	"thermalexpansion.furnace_ore",
+	"thermalexpansion.furnace_pyrolysis",
+	"thermalexpansion.pulverizer",
+	"thermalexpansion.pulverizer_petrotheum",
+	"thermalexpansion.sawmill",
+	"thermalexpansion.sawmill_tapper",
+	"thermalexpansion.smelter",
+	"thermalexpansion.smelter_pyrotheum",
+	"thermalexpansion.compactor",
+	"thermalexpansion.compactor_mint",
+	"thermalexpansion.compactor_gear",
+	"thermalexpansion.refinery",
+	"thermalexpansion.refinery_fossil",
+	"thermalexpansion.refinery_potion",
+	"thermalexpansion.centrifuge",
+	"thermalexpansion.centrifuge_mobs",
+	"thermalexpansion.extruder",
+	"thermalexpansion.extruder_sedimentary",
+];
 
-mods.jei.JEI.hideCategory("thermalexpansion.factorizer_split");
-mods.jei.JEI.hideCategory("thermalexpansion.factorizer_combine");
-mods.jei.JEI.hideCategory("thermalexpansion.furnace");
-mods.jei.JEI.hideCategory("thermalexpansion.furnace_food");
-mods.jei.JEI.hideCategory("thermalexpansion.furnace_ore");
-mods.jei.JEI.hideCategory("thermalexpansion.furnace_pyrolysis");
-mods.jei.JEI.hideCategory("thermalexpansion.pulverizer");
-mods.jei.JEI.hideCategory("thermalexpansion.pulverizer_petrotheum");
-mods.jei.JEI.hideCategory("thermalexpansion.sawmill");
-mods.jei.JEI.hideCategory("thermalexpansion.sawmill_tapper");
-mods.jei.JEI.hideCategory("thermalexpansion.smelter");
-mods.jei.JEI.hideCategory("thermalexpansion.smelter_pyrotheum");
-mods.jei.JEI.hideCategory("thermalexpansion.compactor");
-mods.jei.JEI.hideCategory("thermalexpansion.compactor_mint");
-mods.jei.JEI.hideCategory("thermalexpansion.compactor_gear");
-mods.jei.JEI.hideCategory("thermalexpansion.refinery");
-mods.jei.JEI.hideCategory("thermalexpansion.refinery_fossil");
-mods.jei.JEI.hideCategory("thermalexpansion.refinery_potion");
-mods.jei.JEI.hideCategory("thermalexpansion.centrifuge");
-mods.jei.JEI.hideCategory("thermalexpansion.centrifuge_mobs");
-mods.jei.JEI.hideCategory("thermalexpansion.extruder");
-mods.jei.JEI.hideCategory("thermalexpansion.extruder_sedimentary");
+for category in toHideCategory {
+	mods.jei.JEI.hideCategory(category);
+}
+
+
 
 mods.jei.JEI.hide(<appliedenergistics2:facade>);
 mods.jei.JEI.hide(<utilityworlds:portal_mining>);
 mods.jei.JEI.hide(<utilityworlds:portal_garden>);
 mods.jei.JEI.hide(<utilityworlds:portal_void>);
 mods.jei.JEI.hide(<utilityworlds:portal_return>);
-mods.jei.JEI.removeAndHide(<theoneprobe:iron_helmet_probe>);
-mods.jei.JEI.removeAndHide(<theoneprobe:gold_helmet_probe>);
-mods.jei.JEI.removeAndHide(<theoneprobe:diamond_helmet_probe>);
-mods.jei.JEI.removeAndHide(<theoneprobe:probenote>);
-mods.jei.JEI.removeAndHide(<theoneprobe:creativeprobe>);
 
 
+val toRemoveAndHide as IItemStack[] = [
+	<thermalfoundation:material:101>,
+	<thermalfoundation:material:166>,
+	<thermalfoundation:material:165>,
+	<thermalfoundation:material:102>,
+	<thermalfoundation:material:101>,
+	
+	<enderio:item_material:39>,
+	<enderio:item_alloy_ingot>,
+	<enderio:item_alloy_ingot:3>,
+	<enderio:item_alloy_ingot:1>,
+	<enderio:item_alloy_ingot:2>,
+	<enderio:item_alloy_ingot:6>,
+	<enderio:item_alloy_ingot:8>,
+	<enderio:item_alloy_ingot:9>,
+	<enderio:item_alloy_endergy_ingot:2>,
+	<enderio:item_alloy_endergy_ingot:3>,
+	<enderio:item_alloy_endergy_ingot:5>,
+	<enderio:item_alloy_endergy_ingot:6>,
+	
+	<enderio:block_simple_alloy_smelter>,
+	<enderio:block_alloy_smelter>,
+	<enderio:block_enhanced_alloy_smelter>,
+	
+	<theoneprobe:iron_helmet_probe>,
+	<theoneprobe:gold_helmet_probe>,
+	<theoneprobe:diamond_helmet_probe>,
+	<theoneprobe:probenote>,
+	<theoneprobe:creativeprobe>,
+];
+
+for items in toRemoveAndHide {
+	mods.jei.JEI.removeAndHide(items);
+}

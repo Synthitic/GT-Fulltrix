@@ -1,3 +1,53 @@
+v0.0.4 - 08/08/21
+	General:
+		+Cubicchunks should be gone for good and not cause any crashes
+		+Ore dictionary fixes...
+		+Vanilla Fix
+		+Cooking for blockheads
+		+Pam's Harvestcraft
+		+Spice of Life (Carrot)
+		+Forgiving Void
+		+Gregtech Food Options
+		+Deep Mob Learning: Relearned
+		+RandomPatches (Forge)
+		+Carry On
+		+Mod Tweaker
+		+Chunk animator
+	Better Questing:
+		+Added a quest search button
+		+Applied Energistics 2 tab started
+		+Circuit Progression tab started
+		+MV tab started
+		+HV tab started
+		+Tinkers' tab started
+		+All questlines have an icon
+	Applied Energistics 2:
+		+Added chemical reactor charged certus quartz recipe
+		+Added macerator recipe for fluix dust
+		+Added pure crystal autoclave recipes
+		-Removed sagmill recipe for fluix dust
+	Lazy AE2:
+		+Changed power consumption and processing values to balance around AE2 taking 50x more power
+	Pam's Harvestcraft:
+		+Vanilla Foods are unnerfed
+	GTCE and Gregicality:
+		+Gave all fish added by Pam's fluid extractor recipes to obtain fish oil
+		+Changed energy values for MV prospector
+		+Added LV "Superconductor" (redstone alloy)
+		+Added custom materials for thermal series alloys and enderio alloys
+		-Balanced out stainless steel dust and ingot recipe EU/t
+		-Changed the Scanner recipe
+	EnderIO:
+		+Changed I/O of fluid conduits
+		+Changed I/O of endergy conduits
+		-Disabled alloy smelter
+	Forestry:
+		+Worktable recipe changed
+	Thermal Series:
+		+Redid dynamo power production, machine power consumption, upgrades, crafing recipes, fuels
+		+Hid signalum, lumium, blend and ingots because of custom material
+		-Changed recipes for signalum, lumium
+
 v0.0.3 - 08/03/21
 	General:
 		+MultiblockTweaker

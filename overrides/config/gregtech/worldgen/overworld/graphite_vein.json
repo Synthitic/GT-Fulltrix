@@ -21,11 +21,11 @@
           "value": "ore:graphite"
         },
         {
-          "weight": 10,
-          "value": "ore:mica"
+          "weight": 30,
+          "value": "ore:diamond"
         },
 		{
-          "weight": 30,
+          "weight": 10,
           "value": "ore:coal"
         }
       ]
