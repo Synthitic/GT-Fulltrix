@@ -1,3 +1,4 @@
+#priority 1
 #loader gregtech
 import mods.gregtech.material.MaterialRegistry;
 
@@ -17,7 +18,7 @@ lumium.addFlags(["NO_SMELTING"]);
 //enderio alloys
 val redstoneAlloy = MaterialRegistry.createIngotMaterial(index+3,"redstone_alloy", 0xD63C3C, "METALLIC", 1, [<material:redstone>*1,<material:silicon>*1,<material:carbon>*1], 1, 0, 0, 1700);
 redstoneAlloy.addFlags(["NO_SMELTING"]);
-redstoneAlloy.setCableProperties(32, 1, 0);
+redstoneAlloy.setCableProperties(32, 4, 0);
 
 val electricalSteel = MaterialRegistry.createIngotMaterial(index+4,"electrical_steel", 0xD2D2D2, "SHINY", 1, [<material:steel>*1,<material:silicon>*1], 1, 0, 0, 1700);
 electricalSteel.addFlags(["NO_SMELTING"]);
@@ -46,6 +47,18 @@ energeticSilver.addFlags(["NO_SMELTING"]);
 val vividAlloy = MaterialRegistry.createIngotMaterial(index+12,"vivid_alloy", 0x46BCDB,"SHINY",5,[<material:energetic_silver>*1,<material:ender_pearl>*1],1,0,0,3700);
 vividAlloy.addFlags(["NO_SMELTING"]);
 
+//very heavy oil
+val oilVeryHeavy = MaterialRegistry.createFluidMaterial(index+13,"oil_very_heavy", 0x000000, "FLUID");
+
+//compressed alloys
+val compressedSteel = MaterialRegistry.createIngotMaterial(index+14,"compressed_steel", 0x3E3E3E, "SHINY", 0);
+compressedSteel.addFlags(["GENERATE_PLATE", "NO_SMASHING", "NO_WORKING"]);
+val compressedAluminium = MaterialRegistry.createIngotMaterial(index+15,"compressed_aluminium", 0x5F95B3, "SHINY", 0);
+compressedAluminium.addFlags(["GENERATE_PLATE", "NO_SMASHING", "NO_WORKING"]);
+val compressedBronze = MaterialRegistry.createIngotMaterial(index+16,"compressed_bronze", 0xB65B00, "SHINY", 0);
+compressedBronze.addFlags(["GENERATE_PLATE", "NO_SMASHING", "NO_WORKING"]);
+val compressedAlloyT1 = MaterialRegistry.createIngotMaterial(index+17,"compressed_alloy_t1", 0x685e4d, "SHINY", 0);
+compressedAlloyT1.addFlags(["GENERATE_PLATE", "NO_SMASHING", "NO_WORKING", "GENERATE_ROD"]);
 
 <material:copper>.addFlags(["GENERATE_LONG_ROD","GENERATE_SPRING"]);
 <material:bronze>.addFlags(["GENERATE_LONG_ROD","GENERATE_SPRING"]);

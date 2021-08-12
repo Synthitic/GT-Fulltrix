@@ -1,3 +1,43 @@
+v0.0.5 - 08/14/21
+	General:
+		+Ore dictionary fixes...
+		+Just Enough HarvestCraft
+		+Devtech
+		+Updated PackagedAuto
+		+Updated Gregtech Food Options
+		+Updated Applied Energistics 2
+		+Biomes 'O Plenty
+		+Climate Control
+		-Carry On
+	Better Questing:
+		+Tab progress
+			+Finished Beginning tab
+			+Finished Steam tab
+			+Finished LV tab
+			+Started Chemistry tab and finished LV portion of Chemistry tab
+		+All quests are visible within questlines except for unimplemented content and behind the scenes magic
+			-Quest lines are still hidden until the player completes required content
+	GTCE and Gregicality:
+		+Disabled GTEU to RF converters as there is native support
+		+Every chunk has a fluid reservoir
+		+Added custom fluid reservoirs
+		+Added very heavy oil
+		+Distillation tower moved from EV to HV
+		-Changed MV-IV motors recipes to be harder
+			-Assembly line recipes are not updated yet
+	Advanced Rocketry:
+		+Progression up to the Moon Implemented
+		+Maximum time in minutes that spacesuits internal buffer can store O2 for increased from 30 to 120
+		-Disabled fueling rockets by hand
+		-Downgraded the mod to 1.7.0 due to issues with 2.0.0
+	Tinker Tool Leveling:
+		+Changed base xp for the large tools from 4500 to 500
+	Extra Utilities 2:
+		+Allow the player to break creative blocks
+		+Allow the player to configure creative blocks
+		-Disabled quarry and its dimension
+		-Disabled additional vanilla recipes
+
 v0.0.4 - 08/08/21
 	General:
 		+Cubicchunks should be gone for good and not cause any crashes

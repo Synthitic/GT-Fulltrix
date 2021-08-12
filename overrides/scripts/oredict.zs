@@ -16,8 +16,11 @@ function specialTreatment() {
     var siliconWafer =  <gregtech:meta_item_2:32440>;
     var siliconGlowstoneWafer = <gregtech:meta_item_2:32441>;
     var siliconNaquadahWafer = <gregtech:meta_item_2:32442>;
+	var siliconNeutroniumWafer = <gtadditions:ga_meta_item:32335>;
+	var siliconRutherfordiumWafer = <gtadditions:ga_meta_item:32334>;
+	var siliconDubniumWafer = <gtadditions:ga_meta_item:32333>;
 	var siliconDust = <gregtech:meta_item_1:2061>;
-    <ore:silicon>.addItems([siliconWafer, siliconGlowstoneWafer, siliconNaquadahWafer]);
+    <ore:siliconWafer>.addItems([siliconWafer, siliconGlowstoneWafer, siliconNaquadahWafer, siliconNeutroniumWafer, siliconRutherfordiumWafer, siliconDubniumWafer]);
 	<ore:itemSilicon>.addItems([siliconDust]);
     <ore:blockGlassColorless>.add(<tconstruct:clear_glass>);
 
@@ -303,6 +306,21 @@ static oresAdd as IItemStack[][IOreDictEntry] = {
         <meta_tile_entity:gregtech:rotor_holder.luv>,
         <meta_tile_entity:gregtech:rotor_holder.max>
     ],
+	<ore:anyMaintenanceHatch> : [
+		<meta_tile_entity:gtadditions:maintenance_hatch>,
+		<meta_tile_entity:gtadditions:auto_maintenance_hatch>,
+		<meta_tile_entity:gtadditions:fullauto_maintenance_hatch>,
+	],
+	<ore:anyMufflerHatch>: [
+		<meta_tile_entity:gtadditions:muffler_hatch.lv>,
+		<meta_tile_entity:gtadditions:muffler_hatch.mv>,
+		<meta_tile_entity:gtadditions:muffler_hatch.hv>,
+		<meta_tile_entity:gtadditions:muffler_hatch.ev>,
+		<meta_tile_entity:gtadditions:muffler_hatch.iv>,
+		<meta_tile_entity:gtadditions:muffler_hatch.luv>,
+		<meta_tile_entity:gtadditions:muffler_hatch.zpm>,
+		<meta_tile_entity:gtadditions:muffler_hatch.uv>,
+	],
     //other
     <ore:dustQuartz> : [
         <gregtech:meta_item_1:2201>, //Netherqueartz dust

@@ -15,4 +15,6 @@ function initOreDict() {
 function initRecipes() {
     //scripts.gregtech.gt_materials;
     scripts.recipes.test.init();
+	scripts.recipes.AdvancedRocketry.init();
+	scripts.recipes.OpenComputers.init();
 }

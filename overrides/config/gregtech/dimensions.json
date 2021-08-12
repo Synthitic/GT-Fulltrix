@@ -17,8 +17,20 @@
 	  "dimName": "Deep Dark"
 	},
 	{
-	  "dimID": 3,
+	  "dimID": 100,
 	  "dimName": "Moon"
+	},
+	{
+	  "dimID": 101,
+	  "dimName": "Mars"
+	},
+	{
+	  "dimID": 102,
+	  "dimName": "Phobos"
+	},
+	{
+	  "dimID": 103,
+	  "dimName": "Deimos"
 	},
   ]
 }

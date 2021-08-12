@@ -9,22 +9,14 @@ import crafttweaker.liquid.ILiquidStack;
 import mods.gregtech.recipe.RecipeMaps;
 import mods.gregtech.recipe.FuelRecipe;
 import mods.tconstruct.Alloy;
+import mods.gtadditions.recipe.Utils;
 
 
 static shapedRecipes as IIngredient[][][][IItemStack] = {
-	/*
-    <abyssalcraft:necronomicon:0>: [
-		[
-			[<minecraft:rotten_flesh:0>, <abyssalcraft:corflesh:0>, <minecraft:rotten_flesh:0>],
-			[<abyssalcraft:corflesh:0>, <primal:plant_cloth:0>, <abyssalcraft:corflesh:0>],
-			[<minecraft:rotten_flesh:0>, <abyssalcraft:corflesh:0>, <minecraft:rotten_flesh:0>]
-		]
-	]
-    */
 	//time in a bottle
 	<randomthings:timeinabottle>: [
 		[
-			[<minecraft:golden_apple>, <ore:circuitGood>, <minecraft:golden_apple>],
+			[<minecraft:gold_block>, <ore:circuitGood>, <minecraft:gold_block>],
 			[<minecraft:diamond_block>, <minecraft:clock>, <minecraft:diamond_block>], 
 			[<minecraft:lapis_block>, <minecraft:glass_bottle>, <minecraft:lapis_block>]
 		],
@@ -118,9 +110,9 @@ static shapedRecipes as IIngredient[][][][IItemStack] = {
 	//forestry worktable
 	<forestry:worktable>: [
 		[
-			[<minecraft:chest>, <minecraft:planks>, <minecraft:chest>],
-			[<minecraft:planks>, <avaritia:compressed_crafting_table>, <minecraft:planks>], 
-			[<minecraft:chest>, <minecraft:planks>, <minecraft:chest>]
+			[<ore:chest>, <ore:plankWood>, <ore:chest>],
+			[<ore:plankWood>, <avaritia:compressed_crafting_table>, <ore:plankWood>], 
+			[<ore:chest>, <ore:plankWood>, <ore:chest>]
 		],
 	],
 	
@@ -182,6 +174,45 @@ static shapedRecipes as IIngredient[][][][IItemStack] = {
 			[<ore:stickLongDarkSteel>, <ore:ingotDarkSteel>, <ore:stickLongDarkSteel>]
 		],
 	],
+	
+	//distillation tower
+	<gregtech:machine:2537>: [
+		[
+			[<ore:circuitExtreme>, <ore:pipeLargeStainlessSteel>, <ore:circuitExtreme>],
+			[<gregtech:meta_item_1:32612>, <gregtech:machine:503>, <gregtech:meta_item_1:32612>], 
+			[<ore:circuitExtreme>, <ore:pipeLargeStainlessSteel>, <ore:circuitExtreme>]
+		],
+	],
+	
+	//MV-IV motors
+	<gregtech:meta_item_1:32604>: [
+		[
+			[<ore:cableGtDoubleTungsten>, <ore:wireGtQuadrupleGraphene>, <ore:stickTungstenSteel>],
+			[<ore:wireGtQuadrupleGraphene>, <ore:stickNeodymiumMagnetic>, <ore:wireGtQuadrupleGraphene>],
+			[<ore:stickTungstenSteel>, <ore:wireGtQuadrupleGraphene>, <ore:cableGtDoubleTungsten>]
+		],
+	],
+	<gregtech:meta_item_1:32603>: [
+		[
+			[<ore:cableGtDoubleAluminium>, <ore:wireGtOctalAnnealedCopper>, <ore:stickTitanium>],
+			[<ore:wireGtOctalAnnealedCopper>, <ore:stickNeodymiumMagnetic>, <ore:wireGtOctalAnnealedCopper>],
+			[<ore:stickTitanium>, <ore:wireGtOctalAnnealedCopper>, <ore:cableGtDoubleAluminium>]
+		],
+	],
+	<gregtech:meta_item_1:32602>: [
+		[
+			[<ore:cableGtDoubleGold>, <ore:wireGtDoubleElectrum>, <ore:stickStainlessSteel>],
+			[<ore:wireGtDoubleElectrum>, <ore:stickSteelMagnetic>, <ore:wireGtDoubleElectrum>],
+			[<ore:stickStainlessSteel>, <ore:wireGtDoubleElectrum>, <ore:cableGtDoubleGold>]
+		],
+	],
+	<gregtech:meta_item_1:32601>: [
+		[
+			[<ore:cableGtDoubleCopper>, <ore:wireGtDoubleCupronickel>, <ore:stickAluminium>],
+			[<ore:wireGtDoubleCupronickel>, <ore:stickSteelMagnetic>, <ore:wireGtDoubleCupronickel>],
+			[<ore:stickAluminium>, <ore:wireGtDoubleCupronickel>, <ore:cableGtDoubleCopper>]
+		],
+	],
 };
 
 /*
@@ -211,6 +242,8 @@ static shapelessRecipes as IIngredient[][][IItemStack] = {
 	<gregtech:meta_item_1:2183> * 7: [
 		[<gregtech:meta_item_1:2033>,<gregtech:meta_item_1:2033>,<gregtech:meta_item_1:2033>,<gregtech:meta_item_1:2033>,<gregtech:meta_item_1:2033>,<gregtech:meta_item_1:2033>,<gregtech:meta_item_1:2044>,<gregtech:meta_item_1:2039>,<gregtech:meta_item_1:2016>],
 	],
+	
+	
 };
 
 /*
@@ -283,10 +316,23 @@ static removeRecipes as IItemStack[] = [
 		<thermalexpansion:dynamo:1>,
 		<thermalexpansion:dynamo:2>,
 		<thermalexpansion:augment:576>,
+		
+		//distillation tower
+		<gregtech:machine:2537>,
+		
+		//ender eye
+		<minecraft:ender_eye>,
+		
+		//mv-iv motors
+		<gregtech:meta_item_1:32601>,
+		<gregtech:meta_item_1:32602>,
+		<gregtech:meta_item_1:32603>,
+		<gregtech:meta_item_1:32604>,
 ];
 
 static removeFurnace as IIngredient[] = [
-
+	//slime to rubber. make an oredict slime recipe
+	<gregtech:meta_item_1:32627>,
 ];
 
 function machineRecipes() {
@@ -506,7 +552,80 @@ function machineRecipes() {
 			.outputs(<ore:ingotCrystallineAlloy>.firstItem)
 			.duration(sec(5)).EUt(7680).buildAndRegister();
 			
+		//oredict slime to rubber furnace recipe
+		furnace.addRecipe(<gregtech:meta_item_1:32627>, <ore:slimeball>, 0.0);
 		
+		//very heavy oil into heavy oil
+		distillery.recipeBuilder()
+			.circuit(1)
+			.fluidInputs(<liquid:oil_very_heavy> * 100)
+			.fluidOutputs(<liquid:oil_heavy> * 200)
+			.duration(sec(5)).EUt(1920).buildAndRegister();
+			
+		//extra gelled toluene recipes
+		chemical_reactor.recipeBuilder()
+			.inputs(<ore:dustSugar>*9,<ore:dustPlastic>)
+			.fluidInputs(<liquid:toluene>*1197)
+			.outputs(<gregtech:meta_item_2:32010>*18)
+			.duration(sec(63)).EUt(192).buildAndRegister();
+		
+		large_chemical_reactor.recipeBuilder()
+			.inputs(<ore:dustSugar>*9,<ore:dustPlastic>)
+			.fluidInputs(<liquid:toluene>*1197)
+			.outputs(<gregtech:meta_item_2:32010>*18)
+			.duration(sec(63)).EUt(192).buildAndRegister();
+			
+		//remove assembler ender eye recipes
+		Utils.removeRecipeByOutput(assembler, [<minecraft:ender_eye>], null, false);
+		
+		//chemical reactor recipes for ender eyes
+		chemical_reactor.recipeBuilder()
+			.inputs(<ore:gemEnderPearl>,<ore:dustBlaze>)
+			.outputs(<minecraft:ender_eye>)
+			.duration(sec(5)).EUt(480).buildAndRegister();
+		
+		chemical_reactor.recipeBuilder()
+			.inputs(<ore:blockEnderPearl>,<ore:dustBlaze>*9)
+			.outputs(<ore:blockEnderEye>.firstItem)
+			.duration(sec(45)).EUt(480).buildAndRegister();
+		
+		large_chemical_reactor.recipeBuilder()
+			.inputs(<ore:gemEnderPearl>,<ore:dustBlaze>)
+			.outputs(<minecraft:ender_eye>)
+			.duration(sec(5)).EUt(480).buildAndRegister();
+			
+		large_chemical_reactor.recipeBuilder()
+			.inputs(<ore:blockEnderPearl>,<ore:dustBlaze>*9)
+			.outputs(<ore:blockEnderEye>.firstItem)
+			.duration(sec(45)).EUt(480).buildAndRegister();
+		
+		//remove LCR recipes for golden apple and enchanted golden apple
+		Utils.removeRecipeByOutput(large_chemical_reactor,[<minecraft:golden_apple>],null,false);
+		Utils.removeRecipeByOutput(large_chemical_reactor,[<minecraft:golden_apple:1>],null,false);
+		
+		
+		//MV-IV motor changes
+		Utils.removeRecipeByOutput(assembler,[<gregtech:meta_item_1:32601>],null,false);
+		Utils.removeRecipeByOutput(assembler,[<gregtech:meta_item_1:32602>],null,false);
+		Utils.removeRecipeByOutput(assembler,[<gregtech:meta_item_1:32603>],null,false);
+		Utils.removeRecipeByOutput(assembler,[<gregtech:meta_item_1:32604>],null,false);
+		assembler.recipeBuilder()
+			.inputs(<ore:cableGtDoubleCopper> * 2, <ore:wireGtDoubleCupronickel> * 4, <ore:stickAluminium> * 2, <ore:stickSteelMagnetic>)
+			.outputs(<gregtech:meta_item_1:32601>)
+			.duration(sec(5)).EUt(120).buildAndRegister();
+		assembler.recipeBuilder()
+			.inputs(<ore:cableGtDoubleGold> * 2, <ore:wireGtDoubleElectrum> * 4, <ore:stickStainlessSteel> * 2, <ore:stickSteelMagnetic>)
+			.outputs(<gregtech:meta_item_1:32602>)
+			.duration(sec(5)).EUt(480).buildAndRegister();
+		assembler.recipeBuilder()
+			.inputs(<ore:cableGtDoubleAluminium> * 2, <ore:wireGtOctalAnnealedCopper> * 4, <ore:stickTitanium> * 2, <ore:stickNeodymiumMagnetic>)
+			.outputs(<gregtech:meta_item_1:32603>)
+			.duration(sec(5)).EUt(1920).buildAndRegister();
+		assembler.recipeBuilder()
+			.inputs(<ore:cableGtDoubleTungsten> * 2, <ore:wireGtQuadrupleGraphene> * 4, <ore:stickTungstenSteel> * 2, <ore:stickNeodymiumMagnetic>)
+			.outputs(<gregtech:meta_item_1:32604>)
+			.duration(sec(5)).EUt(7680).buildAndRegister();
+
 			
 }
 
