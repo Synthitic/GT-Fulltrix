@@ -3,4 +3,4 @@ Modpack repository for GT Fulltrix
 
 https://www.curseforge.com/minecraft/modpacks/gt-fulltrix
 
-The next update will be on or before 08/14/21
+The next update will be on or before 08/21/21
