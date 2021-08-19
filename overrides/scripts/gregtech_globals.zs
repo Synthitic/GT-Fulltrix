@@ -66,7 +66,8 @@ global thermal_centrifuge as RecipeMap =            RecipeMap.getByName("thermal
 global unpacker as RecipeMap =                      RecipeMap.getByName("unpacker");
 global vacuum_freezer as RecipeMap =                RecipeMap.getByName("vacuum_freezer");
 global wiremill as RecipeMap =                      RecipeMap.getByName("wiremill");
-//global quantum_pc as RecipeMap =					LargeRecipeMap.of(GARecipeMaps.SIMPLE_QUBIT_GENERATOR);
+global large_engraver as RecipeMap =				LargeRecipeMap.of(GARecipeMaps.LARGE_ENGRAVER_RECIPES);
+//lobal qubit_generator as RecipeMap =				LargeRecipeMap.of(GARecipeMaps.SIMPLE_QUBIT_GENERATOR);
 
 // Tiered Components
 

@@ -22,6 +22,16 @@ if(!isNull(ae2)) {
     }
 }
 
+// hide all alchemistry ingots
+val alc as IMod = loadedMods["alchemistry"];
+if(!isNull(alc)) {
+	for item in alc.items {
+		if(item.displayName has "Ingot") {
+			mods.jei.JEI.removeAndHide(item);
+		}
+	}
+}
+
 
 // Hide all of fluid pattern in extra cells 2
 for fluidpattern in [<extracells:pattern.fluid>] as IItemStack[] {
@@ -120,13 +130,13 @@ for category in toHideCategory {
 }
 
 
+val toHide as IItemStack[] = [
+	<appliedenergistics2:facade>,
+];
 
-mods.jei.JEI.hide(<appliedenergistics2:facade>);
-mods.jei.JEI.hide(<utilityworlds:portal_mining>);
-mods.jei.JEI.hide(<utilityworlds:portal_garden>);
-mods.jei.JEI.hide(<utilityworlds:portal_void>);
-mods.jei.JEI.hide(<utilityworlds:portal_return>);
-
+for items in toHide {
+	mods.jei.JEI.hide(items);
+}
 
 val toRemoveAndHide as IItemStack[] = [
 	<thermalfoundation:material:101>,
@@ -157,8 +167,43 @@ val toRemoveAndHide as IItemStack[] = [
 	<theoneprobe:diamond_helmet_probe>,
 	<theoneprobe:probenote>,
 	<theoneprobe:creativeprobe>,
+	
+	//final tier dank null
+	<danknull:dank_null_5>,
+	<danknull:dank_null_panel_5>,
+	
+	//advanced rocketry
+	<advancedrocketry:productdust:1>,
+	<advancedrocketry:productdust>,
+	<advancedrocketry:productingot>,
+	<advancedrocketry:productingot:1>,
+	<advancedrocketry:productnugget>,
+	<advancedrocketry:productnugget:1>,
+	<advancedrocketry:productplate>,
+	<advancedrocketry:productplate:1>,
+	<advancedrocketry:productrod>,
+	<advancedrocketry:productrod:1>,
+	<advancedrocketry:productsheet>,
+	<advancedrocketry:productsheet:1>,
+	<advancedrocketry:productgear>,
+	<advancedrocketry:productgear:1>,
+	<libvulpes:productplate:3>,
+	<libvulpes:productplate:7>,
+	<libvulpes:productplate:9>,
+	<libvulpes:productrod:1>, 
+	<libvulpes:productrod:4>,
+	<libvulpes:productrod:6>,
+	<libvulpes:productrod:7>,
+	<libvulpes:productrod:10>,
+	
+	//utility worlds
+	<utilityworlds:portal_mining>,
+	<utilityworlds:portal_garden>,
+	<utilityworlds:portal_void>,
+	<utilityworlds:portal_return>,
 ];
 
 for items in toRemoveAndHide {
 	mods.jei.JEI.removeAndHide(items);
 }
+

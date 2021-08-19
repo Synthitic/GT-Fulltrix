@@ -11,11 +11,6 @@
     "type": "ellipsoid",
     "radius": [10, 18]
   },
-  "biome_modifier": {
-    "type": "biome_dictionary",
-    "SANDY": 15,
-    "DRY": 15
-  },
   "filler": {
     "type": "simple",
     "value": {

@@ -46,25 +46,9 @@
       "enable": true
     },
     "amethyst": {
-      "minHeight": 4,
-      "with": {
-        "block": "biomesoplenty:gem_ore",
-        "properties": {
-          "variant": "amethyst"
-        }
-      },
-      "amountPerChunk": 24.0,
-      "maxHeight": 32,
       "enable": true
     },
     "biome_essence": {
-      "minHeight": 4,
-      "with": {
-        "block": "biomesoplenty:biome_block",
-        "properties": {}
-      },
-      "amountPerChunk": 24.0,
-      "maxHeight": 32,
       "enable": true
     }
   }

@@ -1,0 +1,5 @@
+multiblocktweaker.machine.gasoline_engine.name=Gasoline Engine
+
+multiblocktweaker.multiblock.gasoline_engine.description=Produces 8192 EU/t with High Octane Gasoline at 100 percent efficiency. Supply with Liquid Oxygen to boost output to 32768 EU/t at 400 percent efficiency. Can be overclocked, but efficiency cut in half per overclock. Use an EV energy output for 8192 EU/t or an IV energy output for 32768 EU/t.
+
+recipemap.gasoline_engine.name=Gasoline Engine

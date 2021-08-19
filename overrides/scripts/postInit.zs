@@ -13,8 +13,14 @@ function initOreDict() {
 }
 
 function initRecipes() {
-    //scripts.gregtech.gt_materials;
-    scripts.recipes.test.init();
-	scripts.recipes.AdvancedRocketry.init();
-	scripts.recipes.OpenComputers.init();
+    scripts.mods.Gregtech.init();
+	scripts.mods.AdvancedRocketry.init();
+	scripts.mods.OpenComputers.init();
+	scripts.mods.AE2.init();
+	scripts.mods.ThermalSeries.init();
+	scripts.mods.EnderIO.init();
+	scripts.mods.DraconicEvolution.init();
+	scripts.mods.FluxNetworks.init();
+	scripts.mods.DMLR.init();
+	scripts.mods.Misc.init();
 }

@@ -43,7 +43,7 @@
         </planet>
 		<planet name="Mars" customIcon="MarsLike" DIMID="101">
 		  <isKnown>false</isKnown>
-		  <artifact>minecraft:coal 1</artifact>
+		  <artifact>contenttweaker:warp_unit_1</artifact>
           <biomeIds>advancedrocketry:hotdryrock</biomeIds>
           <orbitalDistance>150</orbitalDistance>
           <orbitalTheta>268</orbitalTheta>

@@ -1,3 +1,63 @@
+v0.0.6 - 08/19/21
+	General:
+		+Ore dictionary fixes...
+		+Ore generation fixes...
+		+Script cleaning...
+		+Added Mods
+			+Xtones
+			+Ambient Sounds
+			+Hunger Overhaul
+			+Upsizer Mod [Forge]
+			+MechTech
+			+Smooth Font
+			+Trash Cans
+			+ItemPhysic Full
+		+Updated Mods
+			+Gregtech Food Options
+			+Applied Energistics 2
+			+Infernal Mobs
+			+Draconic Evolution
+		+Flat bedrock is now 1 layer
+		+Removed other charcoal recipes
+		+Blacklisted slime island for void and garden dimensions (if playing multiplayer, still spawns sometimes)
+		-Removed Mods
+			-Just Enough Energistics
+	Better Questing:
+		+Beginning Tab
+			+Added crafting station quest
+			+Fixed steam production depending and fluid conduits depending on each other
+			+Fix Basic Tools quest not accepting tools
+		+Multiblocks Tab
+			+Added steam multi quests
+		+Started EV and IV tabs
+	GTCE & Gregicality:
+		+Added the gasoline engine multiblock
+		+Added engraver recipes for AE2 presses
+		+Increased fluid prospecting speed with solar sampler to take 1% of the default time
+		+Changed carbon fibers to take polymers instead of rare metals
+		+Added quantum eye and star recipes that use Radon
+		+Buffed indium recipe to produce small instead of tiny dust due to replication being gated by ZPM
+		+Added extra qbit recipe involving indium gallium phosphide and radon
+		+Started implementing poor ore generation
+		+Changed foils to be made in the metal bender and removed cluster mills
+		-Rebalanced energy input hatches
+		-Rebalanced sensor and emitter recipes
+			-Assembly line recipes are not changed yet
+		-Rebalanced large miner multis
+		-Rebalanced cutting wafers energy
+	Biomes 'O Plenty:
+		-Disabled all ores from spawning
+	Geographicraft:
+		+Changed the world to be continental rather than many oceans
+	Dank Null:
+		-Last tier disabled
+	Smooth Font:
+		+Font changed to Trebuchet MS
+	Draconic Evolution:
+		+Crafting injectors are by default, single item mode
+	Extended Crafting:
+		-Disabled table duplication
+
 v0.0.5 - 08/14/21
 	General:
 		+Ore dictionary fixes...

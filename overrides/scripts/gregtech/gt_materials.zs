@@ -50,15 +50,36 @@ vividAlloy.addFlags(["NO_SMELTING"]);
 //very heavy oil
 val oilVeryHeavy = MaterialRegistry.createFluidMaterial(index+13,"oil_very_heavy", 0x000000, "FLUID");
 
-//compressed alloys
+//compressed alloys - 1st set
 val compressedSteel = MaterialRegistry.createIngotMaterial(index+14,"compressed_steel", 0x3E3E3E, "SHINY", 0);
-compressedSteel.addFlags(["GENERATE_PLATE", "NO_SMASHING", "NO_WORKING"]);
+compressedSteel.addFlags(["GENERATE_PLATE", "NO_SMASHING", "NO_WORKING","EXCLUDE_BLOCK_CRAFTING_RECIPES"]);
 val compressedAluminium = MaterialRegistry.createIngotMaterial(index+15,"compressed_aluminium", 0x5F95B3, "SHINY", 0);
-compressedAluminium.addFlags(["GENERATE_PLATE", "NO_SMASHING", "NO_WORKING"]);
+compressedAluminium.addFlags(["GENERATE_PLATE", "NO_SMASHING", "NO_WORKING","EXCLUDE_BLOCK_CRAFTING_RECIPES"]);
 val compressedBronze = MaterialRegistry.createIngotMaterial(index+16,"compressed_bronze", 0xB65B00, "SHINY", 0);
-compressedBronze.addFlags(["GENERATE_PLATE", "NO_SMASHING", "NO_WORKING"]);
+compressedBronze.addFlags(["GENERATE_PLATE", "NO_SMASHING", "NO_WORKING","EXCLUDE_BLOCK_CRAFTING_RECIPES"]);
 val compressedAlloyT1 = MaterialRegistry.createIngotMaterial(index+17,"compressed_alloy_t1", 0x685e4d, "SHINY", 0);
-compressedAlloyT1.addFlags(["GENERATE_PLATE", "NO_SMASHING", "NO_WORKING", "GENERATE_ROD"]);
+compressedAlloyT1.addFlags(["GENERATE_PLATE", "NO_SMASHING", "NO_WORKING", "GENERATE_ROD","EXCLUDE_BLOCK_CRAFTING_RECIPES"]);
+
+//desh
+val desh = MaterialRegistry.createIngotMaterial(index+18,"desh",0x2E2E2E,"METALLIC",4,[<material:rare_earth>*1],0,0,0,4800);
+desh.addFlags(["GENERATE_ORE","NO_SMELTING","DISABLE_DECOMPOSITION"]);
+
+//compressed alloys - 2nd set
+val meteorIron = MaterialRegistry.createIngotMaterial(index+19,"meteoric_iron",0x720057,"METALLIC",4,[<material:iron>*1,<material:rare_earth>*1],0,0,0,3800);
+meteorIron.addFlags(["GENERATE_ORE","NO_SMELTING","GENERATE_PLATE","DISABLE_DECOMPOSITION"]);
+val compressedAlloyT2 = MaterialRegistry.createIngotMaterial(index+20,"compressed_alloy_t2", 0xD865CD, "SHINY", 0);
+compressedAlloyT2.addFlags(["GENERATE_PLATE", "NO_SMASHING", "NO_WORKING", "GENERATE_ROD","EXCLUDE_BLOCK_CRAFTING_RECIPES"]);
+
+//sodium potassium
+val sodiumPotassium = MaterialRegistry.createFluidMaterial(index+21,"sodium_potassium", 0x08FF00, "GAS");
+
+//magnetic samarium
+val samariumMagnetic = MaterialRegistry.createIngotMaterial(index+22,"samarium_magnetic",0x000000,"MAGNETIC",0);
+samariumMagnetic.addFlags(["GENERATE_ROD"]);
+
+//fluxed electrum
+val fluxedElectrum = MaterialRegistry.createIngotMaterial(index+23,"fluxed_electrum",0xFAFF00,"SHINY",4,[<material:electrum>*1,<material:blue_steel>*1,<material:red_steel>*1,<material:naquadah_alloy>*1],0,0,0,10000);
+fluxedElectrum.addFlags(["GENERATE_FINE_WIRE","NO_SMELTING"]);
 
 <material:copper>.addFlags(["GENERATE_LONG_ROD","GENERATE_SPRING"]);
 <material:bronze>.addFlags(["GENERATE_LONG_ROD","GENERATE_SPRING"]);
@@ -81,3 +102,23 @@ compressedAlloyT1.addFlags(["GENERATE_PLATE", "NO_SMASHING", "NO_WORKING", "GENE
 <material:iron>.addFlags(["GENERATE_SMALL_GEAR"]);
 
 <material:uranium_radioactive>.addFlags(["GENERATE_ORE"]);
+
+<material:rhodium_plated_palladium>.addFlags(["GENERATE_FRAME"]);
+
+<material:osmiridium>.addFlags(["GENERATE_METAL_CASING", "GENERATE_FRAME"]);
+
+<material:black_steel>.addFlags(["GENERATE_FINE_WIRE"]);
+
+<material:perlite>.addFlags(["GENERATE_ORE"]);
+<material:uvarovite>.addFlags(["GENERATE_ORE"]);
+<material:realgar>.addFlags(["GENERATE_ORE"]);
+
+<material:tin>.addFlags(["GENERATE_SPRING"]);
+<material:gold>.addFlags(["GENERATE_SPRING"]);
+<material:aluminium>.addFlags(["GENERATE_SPRING"]);
+<material:tungsten>.addFlags(["GENERATE_SPRING"]);
+<material:yttrium_barium_cuprate>.addFlags(["GENERATE_SPRING"]);
+<material:vanadium_gallium>.addFlags(["GENERATE_SPRING"]);
+<material:niobium_titanium>.addFlags(["GENERATE_SPRING"]);
+
+

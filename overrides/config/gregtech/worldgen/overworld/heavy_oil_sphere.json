@@ -11,10 +11,6 @@
     "type": "fluid_spring",
     "chance": 0.40
   },
-  "biome_modifier": {
-    "type": "biome_dictionary",
-    "sandy": 5
-  },
   "generator": {
     "type": "sphere",
     "radius": [8, 12]
