@@ -5,5 +5,4 @@ https://www.curseforge.com/minecraft/modpacks/gt-fulltrix
 
 https://discord.gg/E5eQJZWgHN
 
-Update scheduled for 08/28/21 has been pushed back one week.
-The next update will be on or before 09/04/21
+Pack development is paused as I have chosen to focus on helping with CEu development and its addons. Once those are finished, development will continue for the pack.
